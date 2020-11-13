@@ -1,7 +1,7 @@
 ---
 tags: []
 created: 2020-09-04T02:10:58.741Z
-modified: 2020-09-04T02:11:59.059Z
+modified: 2020-09-22T03:57:14.699Z
 ---
 $$
  \alpha\beta\chi
@@ -22,6 +22,136 @@ $\frac{abc}{xyz}$
 *** This is __underlined__
 
 @endmindmap
+```
+
+``` puml
+@startuml
+
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+
+osa_user_green_developer(Mary, "Mary", "Product team", "Developer")
+osa_user_green_operations(Ivan, "Ivan", "IT Team", "Server Admin")
+osa_user_green_business_manager(Bob, "Bob", "Accounts team", "Manager")
+
+' Devices
+osa_desktop(pc, "192.168.1.10", "Windows 10", "PC")
+osa_laptop(mac, "192.168.1.12", "Mac", "Mac")
+osa_iPhone(iphone, "Dynamic IP", "iPhone 11", "Phone")
+osa_iPhone(android, "Dynamic IP", "Android 10", "Phone")
+osa_server(server, "192.168.1.100", "Ubuntu Server 20.04 LTS", "Server")
+
+' Network
+osa_device_wireless_router(wifiAP, "192.168.1.1", "Network")
+osa_hub(hub, "Office hub", "Hub")
+osa_firewall(firewall, "51.37.24.103", "Network")
+osa_cloud(cloud, "Internet", "Network")
+
+
+Mary --> pc: source code
+Mary --> android: social media
+
+Bob --> mac: financial info
+Bob --> iphone: phone calls
+
+
+Ivan --> server: configuration
+
+iphone --> wifiAP
+android --> wifiAP
+wifiAP --> hub
+
+server --> wifiAP
+mac --> hub
+pc --> hub
+
+
+hub --> firewall
+
+firewall --> cloud
+
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
+@enduml
+
+```
+
+``` puml
+@startuml
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified.puml>
+!include <awslib/Compute/all.puml>
+!include <awslib/mobile/all.puml>
+!include <awslib/general/all.puml>
+!include <awslib/GroupIcons/all.puml>
+
+' skinparam linetype polyline
+ skinparam linetype ortho
+
+package "AWS Cloud" {
+EC2(Smadex, "Smadex Service", " ")
+}
+
+Users(Users, "Users", " ")
+TraditionalServer(AdExchange, "Ad Exchange", " ")
+Mobile(Mobile, "Publisher app or web", " ")
+
+Users -down-> Mobile: 1. Visits
+Mobile -right-> AdExchange: 2. Start auction
+AdExchange -right-> Smadex: 3. Bid request / response
+Smadex -left-> Mobile: 4. Show Ad
+Users -right-> Smadex: 5. Impression / click / install / event {request id}
+@enduml
+
+```
+``` puml
+@startuml
+
+
+autonumber
+box "UnTrustedDomain" #Red
+	database UnTrustedKeyStore as UKS
+	control UnTrustedKeyManager as UKM
+    boundary KeyLoader as KL
+end box
+
+box "TrustedDomain" #Green
+	database PersistentStorage as KS
+    control KeyManager as KM
+
+end box
+
+
+group In the Beginning...
+    
+    group RootKBPK    
+        note over KM: A Unique random key is born
+        KS --> KS: Root KBPK exists
+    end
+   
+    group Storage in UnTrustedDomain 
+        KM --> KM: Create Class N KPBK
+        KS --> KM: RootKBPK 
+        note over KM: Shorthand for create a KeyBlock with ClassKBPK N as key payload, and RootKBPK as KBPK
+        UKM --> UKS: KeyBlock[ClassKBPK N]RootKBPK        
+        note over UKS: Process is repeated for ClassKBPK 1,2,3...N 
+    end
+end 
+
+@enduml
+
 ```
 
 ``` puml
