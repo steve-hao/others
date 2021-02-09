@@ -37,7 +37,7 @@ Param4 value4
 
 你可以强制使用黑白输出格式，通过 skinparam monochrome true 命令。
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam monochrome true
 actor User
@@ -63,7 +63,7 @@ deactivate A
 
 You can disable the shadowing using the skinparam shadowing false command.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 left to right direction
 skinparam shadowing<<no_shadow>> false
@@ -82,7 +82,7 @@ User -- fuc
 可以通过 skinparam monochrome reverse 命令，强制使用黑和白的输出，在黑色背景的环境下，尤其适用。
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam monochrome reverse
 actor User
@@ -110,7 +110,7 @@ deactivate A
 你可以使用标准颜色名称或者 RGB 码
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 colors
 @enduml
@@ -158,7 +158,7 @@ Param name | Default value | Comment
 sequenceMessageAlign | left | 用于时序图中的消息 (message)
 sequenceReferenceAlign | center | 在时序图中用于 ref over
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam sequenceMessageAlign center
 Alice -> Bob : Hi
@@ -168,7 +168,7 @@ Alice -> Bob : This is very long
 
 ### 23.9 Examples
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam backgroundColor #EEEBDC
 skinparam handwritten true
@@ -207,7 +207,7 @@ deactivate A
 ```
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam handwritten true
 skinparam actor {
@@ -232,7 +232,7 @@ MySql --> (Use)
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam roundcorner 20
 skinparam class {
@@ -246,7 +246,7 @@ Class03 o-- Class04 : aggregation
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam interface {
 backgroundColor RosyBrown
@@ -271,7 +271,7 @@ HTTP - [Web Server]
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 [AA] <<static lib>>
 [BB] <<shared lib>>
@@ -304,7 +304,7 @@ java -jar plantuml.jar -language
 
 结果如下: 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 help skinparams
 @enduml

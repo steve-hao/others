@@ -12,7 +12,7 @@ Salt 是 PlantUML 下面的子项目用来帮助用户来设计图形接口.
 * 复选框用 [ 和 ]。
 * 用户文字域用 "。
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 Just plain text
@@ -37,7 +37,7 @@ Just plain text
 
 例子如下
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 Login | "MyName "
@@ -56,7 +56,7 @@ Password | "**** "
  - | 显示所有水平线
  + | 显示外框线
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {+
 Login | "MyName "
@@ -70,7 +70,7 @@ Password | "**** "
 
 more info
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {^"My group box"
 Login | "MyName "
@@ -84,7 +84,7 @@ Password | "**** "
 
 你可以使用几条横线表示分隔符
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 salt
 {
@@ -105,7 +105,7 @@ Another text
 
 使用树结构，你必须要以 {T 进行起始，然后使用 + 定义层次。
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 {T
@@ -130,7 +130,7 @@ Another text
 
 You can combine trees with tables.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 {T
@@ -154,7 +154,7 @@ You can combine trees with tables.
 
 And add lines.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 ..
@@ -196,7 +196,7 @@ And add lines.
 
 You can define subelements by opening a new opening bracket.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 Name | " "
@@ -211,7 +211,7 @@ Superclass: | { "java.lang.Object " | [Browse...] }
 
 你可以通过 {/ 标记增加对应的选项卡。注意：可以使用 HTML 代码来增加粗体效果。
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {+
 {/ <b>General | Fullscreen | Behavior | Saving }
@@ -228,7 +228,7 @@ Superclass: | { "java.lang.Object " | [Browse...] }
 
 可以定义垂直选项卡，如下:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {+
 {/ <b>General
@@ -251,7 +251,7 @@ Saving } |
 
 你可以使用记号 {* 来添加菜单。
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {+
 {* File | Edit | Source | Refactor }
@@ -269,7 +269,7 @@ Saving } |
 
 你也可以打开一个菜单：
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {+
 {* File | Edit | Source | Refactor
@@ -293,7 +293,7 @@ Refactor | New | Open File | - | Close | Close All }
 * `*` 单元格同时具备 span 和 left 两个属性
 * `.` 是空白单元格
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {#
 
@@ -309,7 +309,7 @@ Row header 2 | A long cell | *
 You can use {S notation for scroll bar like in following examples:
 * {S: for horizontal and vertical scrollbars
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {S
 Message
@@ -323,7 +323,7 @@ Message
 
 * {SI : for vertical scrollbar only
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {SI
 Message
@@ -337,7 +337,7 @@ Message
 
 * {S- : for horizontal scrollbar only
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {S-
 Message
@@ -354,7 +354,7 @@ Message
 
 It is possible to change text color of widget.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 <color:Blue>Just plain text
@@ -411,7 +411,7 @@ OpenIconic is an very nice open source icon set. Those icons have been integrate
 can use them out-of-the-box.
 You can use the following syntax: <&ICON_NAME>.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startsalt
 {
 Login<&person> | "MyName "
@@ -423,7 +423,7 @@ Password<&key> | "**** "
 
 The complete list is available on OpenIconic Website, or you can use the following special diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 listopeniconic
 @enduml
@@ -435,7 +435,7 @@ listopeniconic
 
 You can read the following explanation.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 (*) --> "
 {{
@@ -485,7 +485,7 @@ failed, sorry
 
 It can also be combined with define macro.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !unquoted procedure SALT($x)
 "{{
@@ -535,7 +535,7 @@ wait -down-> SALT(error)
 
 You can include salt on while condition of activity diagram.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 start
 while (\n{{\nsalt\n{+\nPassword | "**** "\n[Cancel] | [ OK ]}\n}}\n) is (Incorrect)

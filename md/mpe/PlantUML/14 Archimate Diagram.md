@@ -10,7 +10,7 @@ You can use the archimate keyword to define an element. Stereotype can optionall
 
 Some colors (Business, Application, Motivation, Strategy, Technology, Physical, Implementation) are also available.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 archimate #Technology "VPN Server" as vpnServerA <<technology-device>>
 rectangle GO #lightgreen
@@ -23,7 +23,7 @@ rectangle WAIT #orange
 
 Using the circle keyword and the preprocessor, you can also create junctions.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !define Junction_Or circle #black
 !define Junction_And circle #whitesmoke
@@ -42,7 +42,7 @@ WAIT -down-> JunctionAnd
 
 ### 14.3 Example 1
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam rectangle<<behavior>> {
 roundCorner 25
@@ -102,7 +102,7 @@ endlegend
 
 ### 14.4 Example 2
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam roundcorner 25
 rectangle "Capture Information" as CI <<$archimate/business-process>> #Business
@@ -113,7 +113,7 @@ rectangle "Capture Information" as CI <<$archimate/business-process>> #Business
 
 You can list all possible sprites for Archimate using the following diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 listsprite
 @enduml

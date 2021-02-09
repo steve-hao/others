@@ -6,7 +6,7 @@ WBS diagram are still in beta: the syntax may change without notice.
 
 This syntax is compatible with OrgMode
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 * Business Process Modelling WBS
 ** Launch the project
@@ -26,7 +26,7 @@ This syntax is compatible with OrgMode
 
 You can change direction using < and >
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 * Business Process Modelling WBS
 ** Launch the project
@@ -45,7 +45,7 @@ You can change direction using < and >
 
 You can use the following notation to choose diagram side.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 + New Job
 ++ Decide on Job Requirements
@@ -70,7 +70,7 @@ You can use the following notation to choose diagram side.
 
 You can use underscore _ to remove box drawing.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 + Project
  + Part One
@@ -91,7 +91,7 @@ You can use underscore _ to remove box drawing.
 It is possible to change node color:
 * with inline color
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 *[#SkyBlue] this is the partner workpackage
 **[#pink] this is my workpackage
@@ -103,7 +103,7 @@ It is possible to change node color:
 
 * with style color
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 <style>
 wbsDiagram {
@@ -125,7 +125,7 @@ BackgroundColor SkyBlue
 
 It is possible to change diagram style.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 <style>
 wbsDiagram {
@@ -179,7 +179,7 @@ LineThickness 2.5
 
 Using MaximumWidth setting you can control automatic word wrap. Unit used is pixel.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startwbs
 <style>
 node {

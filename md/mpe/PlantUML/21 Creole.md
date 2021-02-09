@@ -8,7 +8,7 @@ Note that ascending compatibility with HTML syntax is preserved.
 
 ### 21.1 Emphasized text
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Alice -> Bob : hello --there--
 ... Some ~~long delay~~ ...
@@ -26,7 +26,7 @@ end note
 
 ### 21.2 List
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 object demo {
 * Bullet list
@@ -51,7 +51,7 @@ end legend
 
 You can use the tilde ~ to escape special creole characters.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 object demo {
 This is not ~___underscored__.
@@ -62,7 +62,7 @@ This is not ~""monospaced"".
 
 ### 21.4 Horizontal lines
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 database DB1 as "
 You can have horizontal line
@@ -86,7 +86,7 @@ end note
 
 ### 21.5 Headings
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 usecase UC1 as "
 = Extra-large heading
@@ -114,7 +114,7 @@ Some HTML tags are also working:
 * `<img:file>` : the file must be accessible by the filesystem
 * `<img:http://plantuml.com/logo3.png> `: the URL must be available from the Internet
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 :* You can change <color:red>text color</color>
 * You can change <back:cadetblue>background color</back>
@@ -131,7 +131,7 @@ Some HTML tags are also working:
 
 You can use `<code> ` if you put some language code in your diagram.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Alice -> Bob : hello
 note right
@@ -144,7 +144,7 @@ end note
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Alice -> Bob : hello
 note left
@@ -180,7 +180,7 @@ end note
 
 It is possible to build table, with | separator.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam titleFontSize 14
 title
@@ -197,7 +197,7 @@ end title
 
 You can specify background colors for cells and lines.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 start
 :Here is the result
@@ -212,7 +212,7 @@ start
 
 You can also specify background colors and colors for border.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 title
 <#lightblue,#red>|= Step |= Date |= Name |= Status |= Link |
@@ -227,7 +227,7 @@ end title
 
 You can also set the border color to the same color as the background.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 node n
 note right of n
@@ -244,7 +244,7 @@ end note
 
 Yan can have a bold header or not.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 note as deepCSS0
 |<#white> Husky / Yorkie |
@@ -274,7 +274,7 @@ You can use |_ characters to build a tree.
 
 On common commands, like title:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam titleFontSize 14
 title
@@ -292,7 +292,7 @@ end title
 
 On Class diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 class Foo{
 **Bar(Model)**
@@ -311,7 +311,7 @@ class Foo{
 
 And on component or deployement diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 [A] as A
 rectangle "Box B" {
@@ -337,7 +337,7 @@ A -> B
 
 It's possible to use any unicode characters with &# syntax or <U+XXXX>
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 usecase foo as "this is &#8734; long"
 usecase bar as "this is also <U+221E> long"
@@ -350,7 +350,7 @@ OpenIconic is an very nice open source icon set. Those icons have been integrate
 
 You can use the following syntax: <&ICON_NAME>.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 title: <size:20><&heart>Use of OpenIconic<&heart></size>
 class Wifi
@@ -362,7 +362,7 @@ end note
 
 The complete list is available on OpenIconic Website, or you can use the following special diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 listopeniconic
 @enduml
@@ -372,7 +372,7 @@ listopeniconic
 
 #### 21.12.1 Activity
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 start
 :**test list 1**
@@ -401,7 +401,7 @@ TODO: FIXME ?
 
 TODO: FIXME
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 class a {
 **test list 1**
@@ -424,7 +424,7 @@ a -- b
 
 #### 21.12.3 Component, Deployment, Use-Case
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 node n [
 **test list 1**
@@ -473,7 +473,7 @@ TODO: FIXME ?
 • Sub sub item
 TODO: FIXME
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 object user {
 **test list 1**
@@ -495,7 +495,7 @@ object user {
 
 #### 21.12.6 MindMap
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startmindmap
 * root
 ** d1
@@ -521,7 +521,7 @@ N/A
 
 #### 21.12.8 Note
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 note as n
 **test list 1**
@@ -555,7 +555,7 @@ N/A (or on note or common commands)
 
 TODO: FIXME ? strong line ____ TODO: FIXME
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 start
 :You can have horizontal line
@@ -576,7 +576,7 @@ stop
 
 #### 21.13.2 Class
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 class a {
 You can have horizontal line
@@ -598,7 +598,7 @@ a -- b
 
 #### 21.13.3 Component, Deployment, Use-Case
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 node n [
 You can have horizontal line
@@ -637,7 +637,7 @@ N/A
 
 #### 21.13.5 Object
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 object user {
 You can have horizontal line
@@ -662,7 +662,7 @@ TODO: DONE [Corrected on V1.2020.18]
 
 TODO: FIXME ? strong line ____ TODO: FIXME
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startmindmap
 * root
 ** d1
@@ -687,7 +687,7 @@ N/A
 
 #### 21.13.8 Note
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 note as n
 You can have horizontal line
@@ -725,7 +725,7 @@ stroked | This is `--stroked--` | This is `<s>stroked</s>`
 underlined | This is `__underlined__` | This is `<u>underlined</u>`
 waved | This is `~~~` | This is `<w>waved</w>`
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startmindmap
 * Style equivalent\n(between Creole and HTML) 
 **:**Creole**

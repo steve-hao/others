@@ -10,7 +10,7 @@ Tasks defined using square bracket.
 
 Their durations are defined using the last verb:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
@@ -27,7 +27,7 @@ Their durations are defined using the last verb:
 
 Their beginning are defined using the start verb:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
@@ -41,7 +41,7 @@ Project starts 2020-07-01
 
 Their ending are defined using the end verb:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
@@ -55,7 +55,7 @@ Project starts 2020-07-01
 
 It is possible to define both absolutely, by specifying dates:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Project starts 2020-07-01
 [Prototype design] starts 2020-07-01
@@ -69,7 +69,7 @@ Project starts 2020-07-01
 
 It is possible to combine declaration on one line with the and conjunction.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Project starts 2020-07-01
 [Prototype design] starts 2020-07-01 and ends 2020-07-15
@@ -81,7 +81,7 @@ Project starts 2020-07-01
 
 It is possible to add constraints between tasks.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 15 days
 [Test prototype] lasts 10 days
@@ -89,7 +89,7 @@ It is possible to add constraints between tasks.
 @endgantt
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 10 days
 [Code prototype] lasts 10 days
@@ -103,7 +103,7 @@ It is possible to add constraints between tasks.
 
 It is possible to define short name for tasks with the as keyword.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] as [D] lasts 15 days
 [Test prototype] as [T] lasts 10 days
@@ -115,7 +115,7 @@ It is possible to define short name for tasks with the as keyword.
 
 It is also possible to customize colors with is colored in.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 13 days
 [Test prototype] lasts 4 days
@@ -129,7 +129,7 @@ It is also possible to customize colors with is colored in.
 
 You can set the completion status of a task.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [foo] lasts 21 days
 [foo] is 40% completed
@@ -144,7 +144,7 @@ You can define Milestones using the happen verb.
 #### 15.7.1 Relative milestone (use of constraints)
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Test prototype] lasts 10 days
 [Prototype completed] happens at [Test prototype]'s end
@@ -155,7 +155,7 @@ You can define Milestones using the happen verb.
 
 #### 15.7.2 Absolute milestone (use of fixed date)
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts 2020-07-01
 [Test prototype] lasts 10 days
@@ -167,7 +167,7 @@ Project starts 2020-07-01
 
 #### 15.7.3 Milestone of maximum end of tasks
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Task1] lasts 4 days
 then [Task1.1] lasts 4 days
@@ -186,7 +186,7 @@ then [Task2.1] lasts 4 days
 
 You can add hyperlinks to tasks.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [task1] lasts 10 days
 [task1] links to [[http://plantuml.com]]
@@ -197,7 +197,7 @@ You can add hyperlinks to tasks.
 
 You can specify a starting date for the whole project. By default, the first task starts at this date.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts the 20th of september 2017
 [Prototype design] as [TASK1] lasts 13 days
@@ -209,7 +209,7 @@ Project starts the 20th of september 2017
 
 It is possible to add colors to some days.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts the 2020/09/01
 2020/09/07 is colored in salmon
@@ -236,7 +236,7 @@ and one of the values:
 
 #### 15.11.1 Daily (by default)
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 saturday are closed
 sunday are closed
@@ -252,7 +252,7 @@ Project starts the 1st of january 2021
 
 #### 15.11.2 Weekly
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 printscale weekly
 saturday are closed
@@ -267,7 +267,7 @@ Project starts the 1st of january 2021
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 printscale weekly
 Project starts the 20th of september 2020
@@ -282,7 +282,7 @@ Project starts the 20th of september 2020
 
 #### 15.11.3 Monthly
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 projectscale monthly
 Project starts the 20th of september 2020
@@ -299,7 +299,7 @@ Project starts the 20th of september 2020
 
 It is possible to close some day.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 project starts the 2018/04/09
 saturday are closed
@@ -316,7 +316,7 @@ sunday are closed
 
 Then it is possible to open some closed day.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 2020-07-07 to 2020-07-17 is closed
 2020-07-13 is open
@@ -330,7 +330,7 @@ Then [Test prototype] lasts 10 days
 
 It's possible to use the then keyword to denote consecutive tasks.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 14 days
 then [Test prototype] lasts 4 days
@@ -340,7 +340,7 @@ then [Deploy prototype] lasts 6 days
 
 You can also use arrow ->
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 14 days
 [Build prototype] lasts 4 days
@@ -354,7 +354,7 @@ You can also use arrow ->
 
 You can use -- to separate sets of tasks.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Task1] lasts 10 days
 then [Task2] lasts 4 days
@@ -368,7 +368,7 @@ then [Task4] lasts 6 days
 
 You can affect tasks on resources using the on keyword and brackets for resource name.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Task1] on {Alice} lasts 10 days
 [Task2] on {Bob:50%} lasts 2 days
@@ -378,7 +378,7 @@ then [Task3] on {Alice:25%} lasts 1 days
 
 Multiple resources can be assigned to a task:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Task1] on {Alice} {Bob} lasts 20 days
 @endgantt
@@ -386,7 +386,7 @@ Multiple resources can be assigned to a task:
 
 Resources can be marked as off on specific days:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 project starts on 2020-06-19
 [Task1] on {Alice} lasts 10 days
@@ -399,7 +399,7 @@ project starts on 2020-06-19
 It also possible to use the and conjunction.
 You can also add delays in constraints.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 13 days and is colored in Lavender/LightBlue
 [Test prototype] lasts 9 days and is colored in Coral/Green and starts 3 days after [Prototype design]'s end
@@ -418,7 +418,7 @@ You can also put comments on several lines using /' to start and '/ to end.
 
 (i.e.: the first character (except space character) of a comment line must be a simple quote ')
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 ' This is a comment
 [T1] lasts 3 days
@@ -430,7 +430,7 @@ is on several lines '/
 
 ### 15.18 Using style
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 <style>
 ganttDiagram {
@@ -474,7 +474,7 @@ end note
 ### 15.19 Add notes
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [task01] lasts 15 days
 note bottom
@@ -489,7 +489,7 @@ end note
 
 Example with overlap.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [task01] lasts 15 days
 note bottom
@@ -503,7 +503,7 @@ end note
 @endgantt
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 -- test01 --
 [task01] lasts 4 days
@@ -531,7 +531,7 @@ end note
 
 TODO: DONE Thanks for correction (of #386 on v1.2020.18) when overlapping
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts 2020-09-01
 [taskA] starts 2020-09-01 and lasts 3 days
@@ -563,7 +563,7 @@ end note
 
 ### 15.20 Pause tasks
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts the 5th of december 2018
 saturday are closed
@@ -579,7 +579,7 @@ sunday are closed
 
 ### 15.21 Change link colors
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [T1] lasts 4 days
 [T2] lasts 4 days and starts 3 days after [T1]'s end with blue dotted link
@@ -588,7 +588,7 @@ sunday are closed
 @endgantt
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Links are colored in blue
 [Prototype design] lasts 14 days
@@ -601,7 +601,7 @@ Links are colored in blue
 
 ### 15.22 Tasks or Milestones on the same line
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 [Prototype design] lasts 13 days
 [Test prototype] lasts 4 days and 1 week
@@ -617,7 +617,7 @@ Links are colored in blue
 
 ### 15.23 Highlight today
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts the 20th of september 2018
 sunday are close
@@ -631,7 +631,7 @@ today is 30 days after start and is colored in #AAF
 
 ### 15.24 Task between two milestones
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 project starts on 2020-07-01
 [P_start] happens 2020-07-03
@@ -648,7 +648,7 @@ Verbal form Example
 
 ### 15.26 Add title, header, footer, caption or legend on gantt diagram
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 header some header
 footer some footer
@@ -670,7 +670,7 @@ You can use the hide footbox keywords to remove the footboxes of the ganttdiagra
 Examples on:
 * daily scale (without project start)
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 hide footbox
 title Foot Box removed
@@ -681,7 +681,7 @@ title Foot Box removed
 
 * daily scale
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 Project starts the 20th of september 2017
 [Prototype design] as [TASK1] lasts 13 days
@@ -692,7 +692,7 @@ hide footbox
 
 * weekly scale
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 hide footbox
 printscale weekly
@@ -710,7 +710,7 @@ Project starts the 1st of january 2021
 
 * monthly scale
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startgantt
 hide footbox
 projectscale monthly

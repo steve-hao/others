@@ -8,7 +8,7 @@ To define a sprite, you have to use a hexadecimal digit between 0 and F per pixe
 
 Then you can use the sprite using <$XXX> where XXX is the name of the sprite.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 sprite $foo1 {
 FFFFFFFFFFFFFFF
@@ -28,7 +28,7 @@ Alice -> Bob : Testing <$foo1>
 
 You can scale the sprite.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 sprite $foo1 {
 FFFFFFFFFFFFFFF
@@ -50,7 +50,7 @@ Alice -> Bob : Testing <$foo1{scale=3}>
 
 Although sprites are monochrome, it's possible to change their color.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 sprite $foo1 {
 FFFFFFFFFFFFFFF
@@ -89,7 +89,7 @@ After copying an image into you clipboard,several possible definitions of the co
 
 ### 22.4 Examples
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 sprite $printer [15x15/8z] NOtH3W0W208HxFz_kMAhj7lHWpa1XC716sz0Pq4MVPEWfBHIuxP3L6kbTcizR8tAhzaqFvXwvFfPEqm0
 start
@@ -97,7 +97,7 @@ start
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
  sprite $bug [15x15/16z] PKzR2i0m2BFMi15p__FEjQEqB1z27aeqCqixa8S4OT7C53cKpsHpaYPDJY_12MHM-BLRyywPhrrlw3qumqNThmXgd1TOterAZmOW8sgiJafogofWRwtV3nCF
  sprite $printer [15x15/8z] NOtH3W0W208HxFz_kMAhj7lHWpa1XC716sz0Pq4MVPEWfBHIuxP3L6kbTcizR8tAhzaqFvXwvFfPEqm0
@@ -145,7 +145,7 @@ You can use the listsprites command to show available sprites:
 
 (Example from Hitchhikers Guide to PlantUML)
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 
 !define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master

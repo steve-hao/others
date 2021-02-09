@@ -20,7 +20,7 @@ Otherwise, the syntax for drawing diagrams is the same as for class diagrams. Al
 
 Examples:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 Entity01 }|..|| Entity02
 Entity03 }o..o| Entity04
@@ -31,7 +31,7 @@ Entity07 |o--|| Entity08
 
 ### 19.2 Entities
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 entity Entity01 {
 * identifying_attribute
@@ -46,7 +46,7 @@ Again, this is the normal class diagram syntax (aside from use of entity instead
 
 The * visibility modifier can be used to identify mandatory attributes. A space can be used after the modifier character to avoid conflicts with the creole bold:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 entity Entity01 {
 optional attribute
@@ -58,7 +58,7 @@ optional attribute
 
 ### 19.3 Complete Example
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 ' hide the spot
 hide circle

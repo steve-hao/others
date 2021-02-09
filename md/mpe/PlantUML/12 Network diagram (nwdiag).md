@@ -6,7 +6,7 @@ Since the syntax is clear and simple, this has been integrated within PlantUML. 
 
 ### 12.1 Simple diagram
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network dmz {
@@ -27,7 +27,7 @@ db02;
 
 ### 12.2 Define multiple addresses
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network dmz {
@@ -49,7 +49,7 @@ db02;
 
 ### 12.3 Grouping nodes
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network Sample_front {
@@ -76,7 +76,7 @@ db02;
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 // define group at outside network definitions
@@ -107,7 +107,7 @@ You can add or change:
 * description;
 * shape.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network Sample_front {
@@ -139,7 +139,7 @@ db02;
 
 You can use all the Sprite of all Standard Library or other.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <office/Servers/application_server>
 !include <office/Servers/database_server>
@@ -167,7 +167,7 @@ db02 [address = "172.x.x.101", description = "<$database_server>\n db02"];
 
 You can also use the icons from OpenIconic on the description.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network dmz {
@@ -193,7 +193,7 @@ ptr [address = "172.x.x.110", description = "<&print*4>\n ptr01"];
 
 You can use same nodes on different networks (more than two networks); nwdiag use in this case 'jump line' over networks.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 // define group at outside network definitions
@@ -226,7 +226,7 @@ db01;
 ### 12.8 Peer networks
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 inet [shape = cloud];
@@ -243,7 +243,7 @@ web02;
 ### 12.9 Peer networks and group
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 internet [ shape = cloud];
@@ -271,7 +271,7 @@ db;
 ### 12.10 Add title, header, footer or legend on network diagram
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 header some header
 footer some footer
@@ -297,7 +297,7 @@ You can change the width of the networks, especially in order to have the same f
 Here are some examples, with all the possibilities:
 * without
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network NETWORK_BASE {
@@ -318,7 +318,7 @@ dev_M [address = "dev_M2" ]
 
 * only the first
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network NETWORK_BASE {
@@ -340,7 +340,7 @@ dev_M [address = "dev_M2" ]
 
 * the first and the second
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network NETWORK_BASE {
@@ -363,7 +363,7 @@ dev_M [address = "dev_M2" ]
 
 * all the network (with same full width)
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 nwdiag {
 network NETWORK_BASE {

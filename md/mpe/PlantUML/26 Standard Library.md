@@ -11,7 +11,7 @@ The Amazon Labs AWS library provides PlantUML sprites, macros, and other include
 
 Used to create PlantUML diagrams with AWS components. All elements are generated from the official AWS Architecture Icons and when combined with PlantUML and the C4 model, are a great way to communicate your design, deployment, and topology as code.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 'Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 'SPDX-License-Identifier: MIT (For details, see https://github.com/awslabs/aws-icons-for-plantuml/blob
@@ -50,7 +50,7 @@ You may also include the common.pumlfile, eg: !include <aws/common>, which conta
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <aws/common>
 !include <aws/Storage/AmazonS3/AmazonS3>
@@ -75,7 +75,7 @@ You may also include the AzureCommon.puml file, eg: !include <azure/AzureCommon.
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <azure/AzureCommon.puml>
 !include <azure/Analytics/AzureEventHub.puml>
@@ -102,7 +102,7 @@ https://github.com/rabelenda/cicon-plantuml-sprites
 
 This repository contains PlantUML sprites generated from Cloudinsight icons, which can easily be used in PlantUML diagrams for nice visual representation of popular technologies.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <cloudinsight/tomcat>
 !include <cloudinsight/kafka>
@@ -131,7 +131,7 @@ You may also include the common.puml file, eg: !include <elastic/common>, which 
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <elastic/common>
 !include <elastic/elasticsearch/elasticsearch>
@@ -157,7 +157,7 @@ You may also include the common.puml file, eg: !include <font-awesome/common>, w
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <tupadr3/common>
 !include <tupadr3/font-awesome/server>
@@ -177,7 +177,7 @@ web4 <--> db1
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <tupadr3/common>
 !include <tupadr3/devicons/mysql>
@@ -201,7 +201,7 @@ You may also include the common.puml file, eg: !include <material/common>, which
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <material/common>
 ' To import the sprite file you DON'T need to place a prefix!
@@ -216,7 +216,7 @@ When mixing sprites macros with other elements you may get a syntax error if, fo
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <material/common>
 ' To import the sprite file you DON'T need to place a prefix!
@@ -237,7 +237,7 @@ There are sprites (*.puml) and colored png icons available. Be aware that the sp
 
 Example of usage:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <tupadr3/common>
 !include <office/Servers/database_server>
@@ -257,7 +257,7 @@ fw <.left.> cloud
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <tupadr3/common>
 !include <office/servers/database_server>
@@ -288,7 +288,7 @@ https://github.com/ebbypeter/Archimate-PlantUML
 
 This repository contains ArchiMate PlantUML macros and other includes for creating Archimate Diagrams easily and consistantly.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <archimate/Archimate>
 title Archimate Sample - Internet Browser
@@ -326,7 +326,7 @@ Rel_Serving_Up(webServer, internetBrowser, "")
 
 https://github.com/michiel/plantuml-kubernetes-sprites
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 !include <kubernetes/k8s-sprites-unlabeled-25pct>
 package "Infrastructure" {
@@ -342,7 +342,7 @@ component "<$node>\nnode" as node
 
 You can list standard library folders using the special diagram:
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 stdlib
 @enduml

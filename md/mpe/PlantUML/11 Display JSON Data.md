@@ -8,7 +8,7 @@ To activate this feature, the diagram must:
 * begin with @startjson keyword
 * end with @endjson keyword.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "fruit":"Apple",
@@ -22,7 +22,7 @@ To activate this feature, the diagram must:
 
 You can use complex JSON structure.
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "firstName": "John",
@@ -53,7 +53,7 @@ You can use complex JSON structure.
 
 ### 11.2 Highlight parts
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 #highlight "lastName"
 #highlight "address" / "city"
@@ -89,7 +89,7 @@ You can use complex JSON structure.
 
 #### 11.3.1 Synthesis of all JSON basic element
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "null": null,
@@ -118,7 +118,7 @@ You can use complex JSON structure.
 
 #### 11.4.1 Array type
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "Numeric": [1, 2, 3],
@@ -132,7 +132,7 @@ You can use complex JSON structure.
 
 #### 11.4.3 Number array
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 [1, 2, 3]
 @endjson
@@ -140,7 +140,7 @@ You can use complex JSON structure.
 
 #### 11.4.4 String array
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 ["1a", "2b", "3c"]
 @endjson
@@ -149,7 +149,7 @@ You can use complex JSON structure.
 #### 11.4.5 Boolean array
 
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 [true, false, true]
 @endjson
@@ -157,7 +157,7 @@ You can use complex JSON structure.
 
 ### 11.5 JSON numbers
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "DecimalNumber": [-1, 0, 1],
@@ -173,7 +173,7 @@ You can use complex JSON structure.
 
 On JSON you can use Unicode directly or by using escaped form like .
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
   "<color:blue><b>code": "<color:blue><b>value",
@@ -186,7 +186,7 @@ On JSON you can use Unicode directly or by using escaped form like .
 
 #### 11.6.2 JSON two-character escape sequence
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 {
 "**legend**: character name": ["**two-character escape sequence**", "example (beetwen 'a' and 'B')"],
@@ -204,7 +204,7 @@ On JSON you can use Unicode directly or by using escaped form like .
 
 TODO: FIXME FIXME or not ?, on the same item as management in PlantUML ? TODO: FIXME
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 [
 "\\\\",
@@ -217,19 +217,19 @@ TODO: FIXME FIXME or not ?, on the same item as management in PlantUML ? TODO: F
 
 ### 11.7 Minimal JSON examples
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 "Hello world!"
 @endjson
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 42
 @endjson
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startjson
 true
 @endjson

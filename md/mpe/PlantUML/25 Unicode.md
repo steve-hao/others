@@ -6,7 +6,7 @@ But letters are not only A-Z latin characters, it could be any kind of letter fr
 
 ### 25.1 Examples
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam handwritten true
 skinparam backgroundColor #EEEBDC
@@ -29,7 +29,7 @@ deactivate A
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 (*) --> "膩平台"
 --> === S1 ===
@@ -46,7 +46,7 @@ skinparam activityBorderColor Peru
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 skinparam usecaseBackgroundColor DarkSeaGreen
 skinparam usecaseArrowColor Olive
@@ -62,7 +62,7 @@ skinparam usecaseBorderColor DarkSlateGray
 @enduml
 ```
 
-``` puml {hide=false}
+```plantuml {hide=false}
 @startuml
 () "Σωκράτηςψεύτης" as Σωκράτης
 Σωκράτης - [Πτηνά πολεμοχαρής]
