@@ -12,3 +12,8 @@ Together2 - Together3
 Together2 -[hidden]--> Bar1
 Bar1 -[hidden]> Bar2
 @enduml
+
+
+@startuml
+sudoku 
+@enduml
